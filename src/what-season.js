@@ -14,13 +14,13 @@ const { NotImplementedError } = require('../extensions/index.js');
 function getSeason(d) {
     if (d==null){return "Unable to determine the time of year!"}
     console.log(d)
-    if(d.getMonth){
+    if(Date. parse(d)){
       let month = d.getMonth();
       console.log(month);
       if ((month>=0)&&(month < 12)){
-       if((month>=3)&&(month<6)){return 'spring'} else {
-         if((month>=6)&&(month<9)){return 'summer'} else{
-           if ((month>=9)&&(month<=11)){return 'autumn'} else
+       if((month>=2)&&(month<5)){return 'spring'} else {
+         if((month>=5)&&(month<8)){return 'summer'} else{
+           if ((month>=8)&&(month<11)){return 'autumn'} else
            return 'winter';
          }
         }
