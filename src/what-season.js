@@ -14,7 +14,7 @@ const { NotImplementedError } = require('../extensions/index.js');
 function getSeason(d) {
     if (d==null){return "Unable to determine the time of year!"}
     console.log(d)
-    if(Date. parse(d)){
+    if(!Date. parse(d)){throw new Error("Invalid date!")}else{
       let month = d.getMonth();
       console.log(month);
       if ((month>=0)&&(month < 12)){
@@ -25,10 +25,7 @@ function getSeason(d) {
          }
         }
       }
-    }
-   
-   else return 'Invalid date!'
-   
+    } 
   }
 
 
